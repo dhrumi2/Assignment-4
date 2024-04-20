@@ -1,0 +1,602 @@
+/*CSS Document */
+
+/*Imports*/
+@font-face {
+    font-family: heading;
+    src: url('DMSerifDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: sub-heading;
+    src: url('Chivo-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: body;
+    src: url('Chivo-Regular.ttf');
+}
+
+/*Defaults*/
+:root{
+    --dark-color: rgb(48, 64, 64);
+    --field-color: rgb(217, 217, 217);
+    --text-dark-color: rgb(74, 90, 90);
+    --text-light-color: rgb(242, 242, 242);
+    --font-ratio: 1.2;
+    --main-heading: calc(3rem * var(--font-ratio)); /*Dm serif - 72pt */
+    --secondary-heading: calc(1.5rem * var(--font-ratio)); /*Dm serif - 60pt */
+    --sub-heading: calc(1.25rem * var(--font-ratio)); /*chivo - 30pt button text, form field text*/
+    --nav-text: calc(1rem * var(--font-ratio)); /*chivo - 28pt */
+    --desc-text: calc(0.8rem * var(--font-ratio)); /*chivo - 24pt footer nav text */
+    --third-heading: calc(1.4rem * var(--font-ratio)); /*chivo - 48pt */
+    --nav: "body"; 
+    --body: "sub-heading";
+    --heading:"heading";
+}
+body{
+    margin: 0px;
+}
+
+html{
+    margin: 0px;
+}
+
+nav{
+    height: 8vh;
+    background-color: #304040;
+    display: flex;
+    margin: 0px;
+    font-family: var(--body);
+    font-size: var(--nav-text);
+    
+}
+
+nav a {
+    text-decoration: none;
+    color:var(--text-light-color);
+    
+ }
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+ #menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+#menu-toggle {
+    display: none;
+    background-color: var(--dark-color);
+    color: var(--text-light-color);
+    border: none;
+}
+
+.logo{
+    margin-top: 12px;
+    margin-left: 10px;
+}
+
+.search-container{
+    width: 200px;
+    margin-left: 20px;
+}
+
+.icon{
+    display: flex;
+    margin-left: 650px;
+    margin-top: 5px;
+}
+
+#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    font-family: var(--body);
+    font-size: var(--nav-text);
+    background-color: #304040;
+    color: var(--text-light-color);
+    border-bottom: 1px solid rgb(217, 217, 217);
+}
+
+.search-icon{
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 30px;
+    top: -37px;
+    right: -10px;
+  }
+
+.profile-icon{
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 35px;
+    top: 10px;
+    right: -40px;
+  }
+
+.cart-icon{
+    position: relative;
+    float: right;
+    width: 30px;
+    height: 35px;
+    top: 10px;
+    right: -55px;
+  }
+
+.header{
+        margin: 0;
+        height: 90vh;
+  }
+
+  .header img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -80px ;
+}
+
+.header h1{
+    font-family: var(--heading);
+    font-size: var(--main-heading);
+    color: var(--text-light-color);
+    margin-top: 0;
+    padding-top: 250px;
+    padding-left: 20px;
+  }
+
+button{
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--dark-color);
+    margin-left: 20px;
+    margin-top: -100px;
+}
+
+button a{
+    font-family: var(--body);
+    text-decoration: none;
+    font-size: var(--nav-text);
+    color: var(--text-light-color);
+}
+
+button:hover{
+    background-color: var(--field-color);
+}
+
+button a:hover{
+    color: var(--dark-color);
+}
+
+#first-part{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: fit-content;
+}
+
+.upper-first{
+    display: flex;
+    flex-grow: row;
+    width: 85%;
+}
+
+.upper-img{
+    background-image: url("../img/2.png");
+    background-size: cover;
+    width: 700px;
+    height: 300px;
+    margin-left: 300px;
+
+}
+
+.upper-img button{
+    transform: translate(40%, 250%);
+    opacity: 0; 
+}
+
+.upper-img:hover{
+    opacity: 0.6;
+}
+
+.upper-first button:hover{
+    opacity: 1; 
+    background-color: var(--dark-color);
+    color: var(--field-color);
+}
+
+.text{
+    background-image: url("../img/text.png");
+    background-size: 80%;
+    width: 40%;
+    background-repeat: no-repeat;
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+.text h2{
+    font-family: var(--heading);
+    font-size: var(--secondary-heading);
+    color: var(--dark-color);
+    margin-top: 80px;
+    margin-left: 120px;
+}
+
+.lower{
+    display: flex;
+    flex-grow: row;
+    width: 85%;
+    margin-top: 50px;
+}
+
+.lower-img{
+    background-image: url("../img/3.png");
+    background-size: cover;
+    width: 550px;
+    height: 300px;
+    margin-left: 170px;
+
+}
+
+.lower-img button{
+    transform: translate(40%, 250%);
+    opacity: 0; 
+}
+
+.lower-img:hover{
+    opacity: 0.6;
+}
+
+.lower button:hover{
+    opacity: 1; 
+    background-color: var(--dark-color);
+    color: var(--field-color);
+}
+
+.lower .text{
+    background-image: url("../img/text\ \(flip\).png");
+    background-size: 60%;
+    width: 35%;
+    background-repeat: no-repeat;
+    margin-left: 350px;
+    margin-top: 20px;
+   
+}
+
+.lower .text h2{
+    font-family: var(--heading);
+    font-size: var(--secondary-heading);
+    color: var(--dark-color);
+    margin-top: 100px;
+    margin-left: -50px;
+}
+
+#second-part{
+    height: 90vh;
+}
+
+.second-part{
+    background-image: url("../img/4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.second-part h1{
+    font-family: var(--heading);
+    font-size: var(--main-heading);
+    color: var(--text-light-color);
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(0%, 320%);
+    opacity: 0;
+}
+
+.second-part:hover{
+    opacity: 0.6;
+}
+
+.second-part h1:hover{
+    opacity: 1;
+}
+
+.second-part a:hover{
+    text-decoration: none;
+}
+
+#third-part{
+    height: 70vh;
+    background-color: var(--text-light-color);
+
+}
+
+h3{
+    font-family: var(--body);
+    font-size: var(--third-heading);
+    color: var(--text-dark-color);
+    text-align: center;
+    padding: 15px;
+}
+
+.flex{
+    display: flex;
+    height: 45vh;
+}
+
+.flex div{
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin: 10px;
+}
+
+.flex div img{
+   width: 90%;
+   height: 110%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.flex div h4{
+    font-family: var(--body);
+    font-size: var(--nav-text);
+    color: var(--text-dark-color);
+    text-align: center;
+    margin-top: 10px;
+ }
+
+ .flex div a{
+    text-decoration: none;
+ }
+
+ .flex div a:hover{
+    text-decoration: underline;
+ }
+
+ #fourth-part{
+    background-color: var(--dark-color);
+    height: 50vh;
+ }
+
+ #fourth-part h1{
+   font-family: var(--heading);
+   font-size: 45px;
+   color: var(--text-light-color);
+   text-align: center;
+   padding-top: 150px;
+ }
+
+ #fifth-part{
+    height: 90vh;
+    margin-top: 50px;
+ }
+
+ #fifth-part h3{
+    font-family: var(--heading);
+    font-size: var(--secondary-heading);
+    color: var(--text-dark-color);
+    margin-top: 10px;
+ }
+
+ .flex2{
+    display: flex;
+    height: 45vh;
+}
+
+.flex2 div{
+    flex: 1;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin: 10px;
+    margin-left: -2px;
+    margin-top: -10px;
+}
+
+.flex2 div img{
+   width: 105%;
+   height: 110%;
+}
+
+.flex2 div img:hover{
+   opacity: 0.6;
+ }
+
+ #sixth-part{
+    display: flex;
+    margin: 0;
+    margin-top: -150px;
+    height: 80vh;
+ }
+
+ .right{
+    width: 50%;
+    margin: 5px;
+    margin-right: 0;
+    background-color: var(--text-light-color);
+ }
+
+ .right h3{
+    font-family: var(--heading);
+    font-size: var(--secondary-heading);
+    color: var(--text-dark-color);
+    text-align: center;
+ }
+
+ .right p{
+    font-family: var(--body);
+    font-size: var(--nav-text);
+    color: var(--text-dark-color);
+    text-align: center;
+    margin-top: -40px;
+ }
+
+ .left{
+    width: 50%;
+    margin: 5px;
+    margin-left: 0;
+    background-image: url("../img/15.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+
+ .formbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    margin-left: 30px;
+ }
+
+ .formbox .inputbox{
+    width: 47%;
+    margin-bottom: 35px;
+    padding: 5px 0;
+    font-family: var(--body);
+    font-size: var(--desc-text);
+    color: var(--text-dark-color);
+    position: relative;
+ }
+
+ .formbox .inputbox input{
+    width: 90%;
+    height: 100%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    font-family: var(--body);
+    color: var(--text-dark-color);
+    background-color: var(--field-color);
+ }
+
+ .formbox .inputbox-re{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 5px 0;
+    font-family: var(--body);
+    font-size: var(--desc-text);
+    color: var(--text-dark-color);
+    position: relative;
+ }
+
+ .formbox .inputbox-re input{
+    width: 95%;
+    height: 100%;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    font-family: var(--body);
+    color: var(--text-dark-color);
+    background-color: var(--field-color);
+ }
+
+ .formbox .inputbox span{
+    padding-top: -100px;
+ }
+
+ .formbox .inputbox span,
+ .formbox .inputbox-re span{
+    position: absolute;
+    left: 0;
+    margin-top: -25px;
+ }
+
+ .formbox button{
+    margin-top: 10px;
+    margin-left: 240px;
+ }
+
+ /* laptop, small screen media  -  1024px or less */
+/* max-width: 1024px is the same as saying 
+if width is less than 1024px, run this css */
+@media screen and (max-width: 64em) {
+    :root{
+        --font-ratio: 1.2;
+        --main-heading: calc(1.5rem * var(--font-ratio));
+        --secondary-heading: calc(1.5rem * var(--font-ratio));
+        --sub-heading: calc(1.25rem * var(--font-ratio));
+        --nav-text: calc(1rem * var(--font-ratio));
+        --body-text: calc(1rem * var(--font-ratio));
+    }
+
+    .header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: start;
+        min-height: 35rem;
+    }  
+}
+
+/* ipad, tablets media  -  768px or less */
+/* max-width: 768px is the same as saying 
+if width is less than 768px, run this css */
+@media screen and (max-width: 48em) {
+    :root{
+        --font-ratio: 1.0;
+        --main-heading: calc(1.2rem * var(--font-ratio));
+        --secondary-heading: calc(1.5rem * var(--font-ratio));
+        --sub-heading: calc(1.25rem * var(--font-ratio));
+        --nav-text: calc(1rem * var(--font-ratio));
+        --body-text: calc(1rem * var(--font-ratio));
+    }
+
+    .header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: start;
+        min-height: 27rem;
+    }
+    
+}
+
+/* mobile media  -  480px or less */
+/* max-width: 480px is the same as saying 
+if width is less than 480px, run this css */
+@media screen and (max-width: 30em) {
+
+    :root{
+        --font-ratio: 0.5;
+        --main-heading: calc(2rem * var(--font-ratio));
+        --secondary-heading: calc(1.8rem * var(--font-ratio));
+        --sub-heading: calc(1.25rem * var(--font-ratio));
+        --nav-text: calc(1rem * var(--font-ratio));
+        --body-text: calc(1.125rem * var(--font-ratio));
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        background-color: var(--dark-color);
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header {
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: start;
+        min-height: 18rem;
+    }
+}
+
+
+
+
